@@ -5,17 +5,15 @@ class Solution(object):
         :type t: str
         :rtype: bool
         """
-        prevIndex = -1
-        for i in range(len(s)):
-            found = False
-            for j in range(len(t)):
-                if s[i] == t[j] and j > prevIndex:
-                    found = True
-                    prevIndex = j
-                    break
-            if not found:
-                return False
-        return True 
+        i, j = 0,0
+        if s == "":
+            return True
+        while j < len(t) and i < len(s):
+            if s[i] == t[j]:
+                i+=1
+            j+=1
+        return i == len(s)
+            
     
 if __name__ == "__main__":
     s = "abc"
