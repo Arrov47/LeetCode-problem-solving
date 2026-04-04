@@ -4,9 +4,10 @@ class Solution(object):
         :type x: int
         :rtype: bool
         """
-        temp = str(x)
-        return temp == temp[::-1]
+        s = str(x)
+        return s == s[::-1]
 
 if __name__ == "__main__":
+    x = 121
     s = Solution()
-    print(s.isPalindrome(121))
+    print(s.isPalindrome(x))
