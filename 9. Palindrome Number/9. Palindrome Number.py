@@ -8,6 +8,5 @@ class Solution(object):
         return s == s[::-1]
 
 if __name__ == "__main__":
-    x = 121
     s = Solution()
-    print(s.isPalindrome(x))
+    print(s.isPalindrome(12345654321))
