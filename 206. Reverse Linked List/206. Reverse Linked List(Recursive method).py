@@ -4,20 +4,23 @@ class ListNode(object):
         self.val = val
         self.next = next
 class Solution(object):
+    retNode = None
+
     def reverseList(self, head):
         """
         :type head: Optional[ListNode]
         :rtype: Optional[ListNode]
         """
-        retNode = None
-        node = head
+        
+        def recurs(node):
+            if node.next is None:
+                self.retNode = ListNode(node.val, self.retNode)
+            else:
+                self.retNode = ListNode(node.val, self.retNode)
+                recurs(node.next)
         if head:
-            while node.next is not None:
-                retNode = ListNode(node.val, retNode)
-                node = node.next
-            retNode = ListNode(node.val,retNode)
-
-        return retNode
+            recurs(head)
+        return self.retNode
 
             
 
