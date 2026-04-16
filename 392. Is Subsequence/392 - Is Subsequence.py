@@ -16,7 +16,7 @@ class Solution(object):
             
     
 if __name__ == "__main__":
-    s = "abcd"
+    s = "abc"
     t = "akmfbfcd"
     c = Solution()
     print("RESULT: ", c.isSubsequence(s,t))
