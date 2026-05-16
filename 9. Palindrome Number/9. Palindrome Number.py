@@ -9,4 +9,4 @@ class Solution(object):
 
 if __name__ == "__main__":
     s = Solution()
-    print(s.isPalindrome(556555))
+    print(s.isPalindrome(56555))
